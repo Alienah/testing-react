@@ -68,4 +68,14 @@ Rellenamos:
 
 Y hacemos click en _Add_
 
-Ahora podemos hacer push a master con nuestro archivo de configuración yml
+Ahora podemos hacer push a una rama con nuestro archivo de configuración yml y mergeamos con master
+
+Una vez que el yml está en master, vamos a settings en la web de travis, buscamos el repo y lo activamos
+
+## Generar un deploy
+
+Ahora que ya tenemos la configuración subida y hemos conectado travis con nuestro repo podemos lanzar los jobs. Para ello nos vamos a la página de [travis](https://travis-ci.org/dashboard) y buscamos nuestro repo, entre las opciones de la derecha (las tres barras) está la de _trigger a build_. hacemos click y esto lanzará los jobs configurados, loc cuales podemos visualizar si entramos en esa rama.
+
+Una vez acabados los jobs, si los tes pasan y lo que le hayamos indicado en la config se hace de manera satisfactoria, se hará un deploy de la build, en este caso en github pages.
+
+Para ver el deploy en github pages, vamos a los settings de nuestro repo y veremos que se ha publicado en la página de github pages nuestro proyecto, en nuestro caso es https://alienah.github.io/testing-react/
